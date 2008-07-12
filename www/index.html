@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Tahoe Storage Illustration</title>
+    <link rel="Stylesheet" type="text/css" href="style.css" media="all" />
+    <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAANzpKkJuhf41xbsK-ifz3GRQ-focQig5UzIv0XipUs_VwEtaJLBQg_vyCD_iP6cJf8eW--K-HHbtbWw"></script>
+    <script type="text/javascript">
+      // <![CDATA[
+      google.load('prototype', '1.6');
+      // ]]>
+    </script>
+    <script type="text/javascript" src="sim.js"></script>
+  </head>
+  <body>
+    <h1>
+      Tahoe Storage Illustration
+    </h1>
+    <div class="step">
+      <div class="instr">Enter plaintext:</div>
+      <div>
+	<textarea class="cleartext" cols="60" rows="4" id="cleartext" onkeyup="sim.updateActiveSteps()"></textarea>
+      </div>
+    </div>
+
+    <div id="active-encrypt" class="disabled">    
+      <div class="action"><input type="submit" value="Encrypt
+&darr;" onclick="sim.onEncrypt(); return false"/></div>
+
+      <div class="step">
+	<div>Generated URL for this file:</div>
+	<div class="secret-for-user" type="text" disabled="disabled" size="105" id="url" value=""></div>
+	<div>Complete, encrypted data:</div>
+	<div><textarea class="encrypted" disabled="disabled" cols="100" rows="5" id="encrypted"></textarea></div>
+      </div>    
+    </div>
+    
+    <div id="active-store" class="disabled">
+      <div class="action"><input type="submit" value="Store
+&darr;" onclick="sim.onStore(); return false"/></div>
+
+      <div class="step">
+	<div>Encrypted shares:</div>
+	<div><table id="shares"><tr><td>No shares yet</td></tr></table></div>
+      </div>
+    </div>
+
+    <div id="active-recover" class="disabled">
+      <div class="action"><input type="submit" value="Recover
+&darr;" onclick="sim.onRecover(); return false"/></div>
+
+      <div class="step">
+	<div>Recovered text:</div>
+	<div><textarea class="cleartext" cols="60" rows="4" id="recovered"></textarea></div>
+	<div id="recover-report"></div>
+	<div>Now go to the share data, corrupt a few shares, and try to recover again.</div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      // <![CDATA[
+      // the browser may have auto restored form data
+      $('url').value = "";
+      $('encrypted').value = "";
+      $('recovered').value = "";
+      sim.updateActiveSteps();
+      // ]]>
+    </script>
+  </body>
+</html>

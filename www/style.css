@@ -1,0 +1,73 @@
+body {
+    background:#CCCCCC none repeat scroll 0% 0%;
+}
+div.step {
+    background:#FFFFFF none repeat scroll 0% 0%;
+    border:1px solid black;
+    margin: 1em;
+    margin-left:1em;
+    padding:0.5em;
+}
+.internal {
+    margin-left: 3em;
+}
+div.share {
+    font-family: monospace;
+    font-size: 50%;
+    margin: 0.3em;
+    white-space: pre;
+}
+.cleartext {
+    background: #ffc;
+}
+
+.secret-for-user {
+    background: #fca;
+    white-space:pre;
+    font-family: monospace;
+    font-size: 80%;
+    color:black;
+    border: 1px inset #dcdad5;
+    height: 1.4em;
+} 
+
+.encrypted {
+    background:#88c none repeat scroll 0% 0%;
+    font-family: monospace;
+    font-size: 80%;
+    color: black;
+}
+
+.delete-share {
+    padding: 0px;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid #ccc;
+    padding: .3em;
+}
+
+#shares td textarea {
+
+}
+.share-used {
+    border: 4px solid green;
+    background: #7474E7;
+}
+.share-errored {
+    border: 4px solid red;
+    background: #cac;
+}
+
+div.action {
+    text-align: center;
+}
+.action input {
+    background: #EFD77D;
+} 
+
+.disabled {
+    opacity: .3;
+}
