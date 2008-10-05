@@ -3,7 +3,7 @@ var sim = {};
 (function() {
 var alphabet = "abcdefghijklmnopqrstuvwxyz234567";
 var N_shares = 10;
-var K_required = 7;
+var K_required = 3;
 var encryptionRelativeSize = 3.0;
 
 sim.onEncrypt = function() {
