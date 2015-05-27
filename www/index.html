@@ -1,16 +1,9 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
   <head>
     <title>Tahoe Storage Illustration</title>
     <link rel="Stylesheet" type="text/css" href="style.css" media="all" />
-    <script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAANzpKkJuhf41xbsK-ifz3GRQ-focQig5UzIv0XipUs_VwEtaJLBQg_vyCD_iP6cJf8eW--K-HHbtbWw"></script>
-    <script type="text/javascript">
-      // <![CDATA[
-      google.load('prototype', '1.6');
-      // ]]>
-    </script>
+    <script type="text/javascript" src="https://bigasterisk.com/lib/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="sim.js"></script>
   </head>
   <body>
@@ -18,7 +11,10 @@
       Tahoe Storage Illustration
     </h1>
     <div>
-      <p>By <a href="mailto:drewp@bigasterisk.com">drewp@bigasterisk.com</a></p>
+      <p>
+        By <a href="mailto:drewp@bigasterisk.com">drewp@bigasterisk.com</a>, released under the
+        <a href="LICENSE">MIT License</a>.
+      </p>
       <p><a href="http://allmydata.org/trac/tahoe">Tahoe</a> is a filesystem that performs encryption and 
       then <a href="http://en.wikipedia.org/wiki/Erasure_code">erasure coding</a> on your data. To see
       a demo of how this works, paste some text into the next box and walk through the steps.</p>
@@ -39,7 +35,7 @@
 
       <div class="step">
 	<div>Generated URL for this file:</div>
-	<div class="secret-for-user" type="text" disabled="disabled" size="105" id="url" value=""></div>
+	<div class="secret-for-user" type="text" disabled="disabled" size="105" id="url"></div>
 	<div>Complete, encrypted data:</div>
 	<div><textarea class="encrypted" disabled="disabled" cols="100" rows="5" id="encrypted"></textarea></div>
       </div>    
